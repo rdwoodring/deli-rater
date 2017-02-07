@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Link } from 'react-router';
+
 class App extends Component {
   render() {
     return (
@@ -10,9 +12,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        <ul role="nav">
+          <li><Link to="/delis">Delis</Link></li>
+        </ul>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        
+        {this.props.children}
       </div>
     );
   }
